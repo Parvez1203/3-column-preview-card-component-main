@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap');
+
+$main-color : hsl(0, 0%, 95%);
+$primary-color :   hsl(31, 77%, 52%);
+$secondary-color : hsl(184, 100%, 22%);
+$tarnary-color : hsl(179, 100%, 13%);
+$header-font : "Big Shoulders Display";
+$pragraph_text : "Lexend Deca";
+$header-size :2rem;
+$size :2rem;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color:$main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .attribution{
+        text-align: center;
+        margin: 2rem auto;
+        font-family: $pragraph_text;
+        font-size: 1rem;
+        color: $secondary-color;
+    }
+
+    .attribution a{
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+.container{
+    width: 100%;
+    min-height: 30rem;
+    max-width: 1200px;
+    display: flex; 
+    box-shadow: 0 20px 50px rgba(59, 43, 91, 0.7);
+    border-radius: 8px; 
+    margin: 0rem 2rem;
+}
+
+.card{
+    min-width: 20rem;
+    padding: 3rem;
+    position: relative;
+
+    svg{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .header{
+        color: $main-color;
+        font-size: $header-size;
+        font-family: $header-font;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .text{
+        color: darken($main-color, 10%);
+        font-family: $pragraph_text;
+        line-height: 1.8;
+        margin-bottom: 3rem;
+    }
+
+    .btn{
+        padding: 1rem 2rem;
+        border-radius: 2.6rem;
+        border: 2px solid $main-color;
+        position: absolute;
+        bottom: 5%;
+        font-family: $pragraph_text;
+        font-size: 1rem;
+        color: $main-color;
+        transition: 0.4s ease all;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color: $main-color !important;
+        color: darkblue;
+        border-radius: darkblue;
+        scale: 1.8;
+    }
+    
+
+}
+
+.card:nth-child(1){
+    background-color: $primary-color;
+    border-radius: 8px 0px 0px 8px;
+
+    .btn{
+        background: $primary-color;
+    }
+
+}
+
+.card:nth-child(2){
+    background-color: $secondary-color;
+    
+    
+    .btn{
+        background: $secondary-color;
+    }
+
+}
+
+.card:nth-child(3){
+    background-color: $tarnary-color;
+    border-radius: 0px 8px 8px 0px;
+
+    .btn{
+        background: $tarnary-color;
+    }
+}
+
+
+@media only screen and (max-width: 700px){
+     .container{
+         flex-wrap: wrap;
+         margin: 2rem auto;
+         width: 90%;
+     }
+      
+     .card{
+         min-width: 200px;
+     }
+
+     .card:nth-child(1){
+         border-radius: 8px 8px 0 0;
+     }
+
+     .card:nth-child(3){
+        border-radius: 0px 0px 8px 8px ;
+    }
+}

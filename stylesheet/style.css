@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .attribution {
+  text-align: center;
+  margin: 2rem auto;
+  font-family: "Lexend Deca";
+  font-size: 1rem;
+  color: #006970;
+}
+
+body .attribution a {
+  text-decoration: none;
+  color: #e38826;
+}
+
+.container {
+  width: 100%;
+  min-height: 30rem;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 20px 50px rgba(59, 43, 91, 0.7);
+          box-shadow: 0 20px 50px rgba(59, 43, 91, 0.7);
+  border-radius: 8px;
+  margin: 0rem 2rem;
+}
+
+.card {
+  min-width: 20rem;
+  padding: 3rem;
+  position: relative;
+}
+
+.card svg {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.card .header {
+  color: #f2f2f2;
+  font-size: 2rem;
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card .text {
+  color: #d9d9d9;
+  font-family: "Lexend Deca";
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.card .btn {
+  padding: 1rem 2rem;
+  border-radius: 2.6rem;
+  border: 2px solid #f2f2f2;
+  position: absolute;
+  bottom: 5%;
+  font-family: "Lexend Deca";
+  font-size: 1rem;
+  color: #f2f2f2;
+  -webkit-transition: 0.4s ease all;
+  transition: 0.4s ease all;
+  cursor: pointer;
+}
+
+.card .btn:hover {
+  background-color: #f2f2f2 !important;
+  color: darkblue;
+  border-radius: darkblue;
+  scale: 1.8;
+}
+
+.card:nth-child(1) {
+  background-color: #e38826;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.card:nth-child(1) .btn {
+  background: #e38826;
+}
+
+.card:nth-child(2) {
+  background-color: #006970;
+}
+
+.card:nth-child(2) .btn {
+  background: #006970;
+}
+
+.card:nth-child(3) {
+  background-color: #004241;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.card:nth-child(3) .btn {
+  background: #004241;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 2rem auto;
+    width: 90%;
+  }
+  .card {
+    min-width: 200px;
+  }
+  .card:nth-child(1) {
+    border-radius: 8px 8px 0 0;
+  }
+  .card:nth-child(3) {
+    border-radius: 0px 0px 8px 8px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
